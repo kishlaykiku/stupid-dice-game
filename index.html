@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Font Awesome 6.3.0 -->
+    <script src="https://kit.fontawesome.com/069ddac36c.js" crossorigin="anonymous"></script>
+
+    <title>Family Feud</title>
+</head>
+
+<body>
+    <!-- Section Heading -->
+    <section id="headingSection" class="heading-section">
+        <h1>Family Feud</h1>
+    </section>
+
+    <!-- Section Dice -->
+    <section id="diceSection" class="dice-section">
+        <div class="card-container">
+            <div class="input-container">
+                <i class="icon fa-regular fa-circle-check"></i>
+                <input class="input-box" id="player1" type="text">
+                <label class="player-1" for="player1">Player 1</label>
+            </div>
+            <div class="player-container">
+                <p id="player12Text" class="player12-text">Player 1</p>
+                <img class="img1" src="./images/dice6.png">
+            </div>
+        </div>
+
+        <p id="win" class="winner">Winner</p>
+
+        <div class="card-container">
+            <div class="input-container">
+                <i class="icon fa-regular fa-circle-check"></i>
+                <input class="input-box" id="player2" type="text">
+                <label class="player-2" for="player2">Player 2</label>
+            </div>
+            <div class="player-container">
+                <p id="player12Text" class="player12-text">Player 2</p>
+                <img class="img2" src="./images/dice6.png">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Button -->
+    <section id="actionButton" class="action-button">
+        <button class="btn" onclick="diceGame();">Roll</button>
+        <button class="btn" onclick="reset();">Reset</button>
+    </section>
+
+    <!-- Main Script -->
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

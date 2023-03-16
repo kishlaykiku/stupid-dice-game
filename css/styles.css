@@ -1,0 +1,159 @@
+@font-face {
+    font-family: valorant;
+    src: url("./fonts/Valorant Font.ttf");
+  }
+  
+/* --------------------------------------------- Elements CSS ---------------------------------------------*/
+
+body {
+    margin: 0;
+    background-color: #181823;
+    font-family: valorant;
+}
+
+h1 {
+    margin: 15px 0;
+    color: #537FE7;
+    font-size: 6rem;
+    text-shadow: 5px 0 #232931;
+    user-select: none;
+}
+
+img {
+    width: 50%;
+    margin-bottom: 2rem;
+}
+
+label {
+    color: #fff;
+    font-size: 0.8rem;
+    user-select: none;
+}
+
+
+/* --------------------------------------------- Class CSS ---------------------------------------------*/
+
+/* Section Heading */
+.heading-section {
+    height: 9rem;
+    text-align: center;
+}
+
+/* Section Dice */
+.dice-section {
+    margin-bottom: 4%;
+    display: flex;
+    gap: 6%;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    width: 20%;
+}
+
+.input-container {
+    position: relative;
+    border-top: 4px solid rgb(245, 98, 98);
+    border-right: 4px solid rgb(245, 98, 98);
+    border-radius: 5px;
+}
+
+.player-1, .player-2 {
+    position: absolute;
+    left: 5px;
+    top: 13px;
+    transition-duration: 200ms;
+} 
+
+.icon {
+    color: #fff;
+    font-size: 1.6rem;
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+
+.icon:active {
+    color: rgb(153, 145, 145);
+    transition-duration: 200ms;
+    transform: scale(0.9);
+}
+
+.input-box {
+    width: 65%;
+    height: 40px;
+    color: #fff;
+    font-size: 1.3rem;
+    position: relative;
+    background: transparent;
+    border: 0;
+    border-bottom: 4px solid rgb(245, 98, 98);
+    border-radius: 5px;
+    outline: none;
+    backdrop-filter: blur(15px);
+
+}
+
+.input-box:focus ~ label {
+    top: -17px;
+    transition-duration: 300ms;
+}
+
+.player-container {
+    border: 5px solid #C0EEF2;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.player12-text {
+    color: #537FE7;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Winner */
+.winner {
+    height: 10%;
+    width: 20%;
+    color: #537FE7;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    cursor: default;
+    user-select: none;
+}
+
+/* Section Button */
+.action-button {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    width: 8rem;
+    height: 3rem;
+    padding-top: 5px;
+    background-color: #537FE7;
+    color: #EEEEEE;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.46);
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+  
+.btn:active {
+    background-color: #4164b6;
+    font-size: 1.5rem;
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.46);
+    transition-duration: 200ms;
+    transform: scale(0.9);;
+}
