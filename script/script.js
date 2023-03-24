@@ -14,6 +14,34 @@ function clearTimeOuts()
     clearTimeout(timeOut2);
 }
 
+
+//Push names in the cards
+function pushPlayer1()
+{
+    //Get name from input field
+    let player1Name =  $("#player1Input").val();
+
+    //Validate and push names
+    if(player1Name != "")
+    {
+        $("#player1Name").text(player1Name);
+        $("#player1Input").val("");
+    }
+}
+function pushPlayer2()
+{
+    //Get name from input field
+    let player2Name = $("#player2Input").val();
+
+    //Validate and push names
+    if(player2Name != "")
+    {
+        $("#player2Name").text(player2Name);
+        $("#player2Input").val("");
+    }
+}
+
+
 //Logical Functionm
 function diceGame()
 {
@@ -57,7 +85,7 @@ function diceGame()
     //Declare Winner Function
     function declareWinner(whoWins)
     {
-        $(".winner").text(whoWins);
+        $("#win").text(whoWins);
     }
 
 
@@ -78,12 +106,20 @@ function diceGame()
 //Resets Everything
 function reset()
 {
+    //Clear all timeouts
     clearTimeOuts();
+    //Resets containers
     diceNumber1 = 0;
     diceNumber2 = 0;
 
+    //Resets Player names in the card
+    $("#player1Name").text("Player 1");
+    $("#player2Name").text("Player 2");
+    //Reverts back the css for "#win"
     $("#win").css({"opacity":"0", "transition-duration":"200ms"});
+    //Chnages Roll button text to "Roll"
     $(".btn:first").text("Roll");
+    //Resets the gif to Dice 6 png
     $(".img1").attr("src", "./images/dice6.png");
     $(".img2").attr("src", "./images/dice6.png");
 }

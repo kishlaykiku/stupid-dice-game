@@ -98,7 +98,7 @@ label {
 
 }
 
-.input-box:focus ~ label {
+input:focus+label, input:valid+label {
     top: -17px;
     transition-duration: 300ms;
 }
