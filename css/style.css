@@ -95,13 +95,43 @@ label {
     border-radius: 5px;
     outline: none;
     backdrop-filter: blur(15px);
-
 }
 
 input:focus+label, input:valid+label {
     top: -17px;
     color: #939393;
     transition-duration: 300ms;
+}
+
+.float-name {
+    position: absolute;
+    color: #fff;
+    font-size: 0.8rem;
+    top: 13px;
+    left: 67px;
+    transition-duration: 200ms;
+    pointer-events: none;
+}
+
+.float-name span {
+    display: inline-block;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+input:focus ~ .float-name span {
+    font-size: 1.3rem;
+    color: #939393;
+    transform: translateX(-65px);
+}
+
+input:focus ~ .float-name {
+    top: 10px;
+}
+
+input:valid ~ .float-name {
+    opacity: 0;
+    transition-duration: 200ms;
 }
 
 .player-container {
