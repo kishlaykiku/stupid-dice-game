@@ -66,7 +66,8 @@ function diceGame()
         //If Player 1 Wins
         if(diceNumber1 > diceNumber2)
         {
-            declareWinner("🚩Player 1 Wins!");
+            let winner = document.getElementById("player1Name").textContent;
+            declareWinner("🚩"+winner+" wins!");
         }
         //If Draw
         else if (diceNumber1 == diceNumber2)
@@ -76,7 +77,8 @@ function diceGame()
         //If Player 2 Wins
         else
         {
-            declareWinner("Player 2 Wins!🚩");
+            let winner = document.getElementById("player2Name").textContent;
+            declareWinner(winner+" wins!🚩");
         }
     }
     timeOut1 = setTimeout(chooseWinner, 1000);
@@ -100,6 +102,19 @@ function diceGame()
         document.getElementById("win").style.opacity = "1";
     }
     timeOut2 = setTimeout(winAnimation, 3000);
+}
+
+
+//Animation Function For Input Label 'Name'
+function setTransitionDelay1()
+{
+        $(".player-1").css({"transition-delay":"400ms"});
+        setTimeout(function() {$(".player-1").css({"transition-delay":"0ms"});}, 300);
+}
+function setTransitionDelay2()
+{
+        $(".player-2").css({"transition-delay":"400ms"});
+        setTimeout(function() {$(".player-2").css({"transition-delay":"0ms"});}, 300);
 }
 
 
