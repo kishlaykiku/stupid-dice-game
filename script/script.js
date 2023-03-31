@@ -22,14 +22,20 @@ function pushPlayer1()
     let player1Name =  $("#player1Input").val().trim();
 
     //Validate and push names
-    if(player1Name.length <= 10)
+    if(player1Name != "")
     {
-        $("#player1Name").text(player1Name);
-        $("#player1Input").val("");
-    }
-    else
-    {
-        $("#player1Input").val("");
+        if(player1Name.length <= 10)
+        {
+            //Plays click sound
+            let click = new Audio("./sounds/click-1.mp3");
+            click.play();
+            $("#player1Name").text(player1Name);
+            $("#player1Input").val("");
+        }
+        else
+        {
+            $("#player1Input").val("");
+        }
     }
 }
 function pushPlayer2()
@@ -38,14 +44,20 @@ function pushPlayer2()
     let player2Name = $("#player2Input").val().trim();
 
     //Validate and push names
-    if(player2Name.length <= 10)
+    if(player2Name != "")
     {
-        $("#player2Name").text(player2Name);
-        $("#player2Input").val("");
-    }
-    else
-    {
-        $("#player2Input").val("");
+        if(player2Name.length <= 10)
+        {
+            //Plays click sound
+            let click = new Audio("./sounds/click-1.mp3");
+            click.play();
+            $("#player2Name").text(player2Name);
+            $("#player2Input").val("");
+        }
+        else
+        {
+            $("#player2Input").val("");
+        }
     }
 }
 
@@ -54,6 +66,10 @@ function pushPlayer2()
 function diceGame()
 {
     clearTimeOuts();
+
+    //Plays dice roll sound
+    let diceRoll = new Audio("./sounds/dice-roll.mp3");
+    diceRoll.play();
 
     //For Player 1
     diceNumber1 = Math.floor((Math.random()*6)) + 1;
@@ -145,4 +161,28 @@ function reset()
     //Resets the gif to Dice 6 png
     $(".img1").attr("src", "./images/dice6.png");
     $(".img2").attr("src", "./images/dice6.png");
+}
+
+
+//Event Listener
+
+//For Player 1 Name Input
+$("#player1Input").keydown(handleButtonForName1);
+function handleButtonForName1(event)
+{
+    //Push names on Enter
+    if(event.key == "Enter")
+    {
+        pushPlayer1();
+    }
+}
+//For Player 2 Name Input
+$("#player2Input").keydown(handleButtonForName2);
+function handleButtonForName2(event)
+{
+    //Push names on Enter
+    if(event.key == "Enter")
+    {
+        pushPlayer2();
+    }
 }
