@@ -19,7 +19,7 @@ function clearTimeOuts()
 function pushPlayer1()
 {
     //Get name from input field
-    let player1Name =  $("#player1Input").val();
+    let player1Name =  $("#player1Input").val().trim();
 
     //Validate and push names
     if(player1Name != "")
@@ -31,7 +31,7 @@ function pushPlayer1()
 function pushPlayer2()
 {
     //Get name from input field
-    let player2Name = $("#player2Input").val();
+    let player2Name = $("#player2Input").val().trim();
 
     //Validate and push names
     if(player2Name != "")
