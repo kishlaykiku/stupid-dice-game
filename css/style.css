@@ -190,3 +190,98 @@ input:valid ~ .float-name {
     transition-duration: 200ms;
     transform: scale(0.9);;
 }
+
+
+/*--------------------------------------------- Media Query ---------------------------------------------*/
+
+@media screen and (max-width: 950px) {
+
+    /*--------------------------------------------- Elements CSS ---------------------------------------------*/
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    label {
+        font-size: 0.6rem;
+    }
+
+
+    /*--------------------------------------------- Class CSS ---------------------------------------------*/
+
+    .card-container {
+        width: 30%;
+    }
+
+    .icon {
+        font-size: 1.3rem;
+        top: 10px;
+        right: 15px;
+    }
+
+    .float-name {
+        font-size: 0.6rem;
+        left: 50px;
+    }
+
+    input:focus ~ .float-name {
+        left: 67px;
+    }
+
+    .player12-text {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        width: 6.5rem;
+        height: 2.5rem;
+        font-size: 1.3rem;
+    }
+
+    .btn:active {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    /*--------------------------------------------- Elements CSS ---------------------------------------------*/
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    label {
+        font-size: 0.58rem;
+    }
+
+
+    /*--------------------------------------------- Class CSS ---------------------------------------------*/
+
+    .heading-section {
+        height: 5rem;
+    }
+
+    .card-container {
+        width: 52%;
+    }
+
+    .dice-section {
+        flex-direction: column;
+        gap: 9%;
+    }
+
+    .float-name {
+        font-size: 0.58rem;
+    }
+
+    .player12-text {
+        font-size: 1.5rem;
+    }
+
+    .winner {
+        height: 12%;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+}
