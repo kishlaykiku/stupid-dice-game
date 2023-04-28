@@ -11,6 +11,11 @@ body {
     font-family: valorant;
 }
 
+::selection {
+    color: #fff;
+    background-color: #8ec9fd43;
+}
+
 h1 {
     margin: 15px 0;
     color: #537FE7;
