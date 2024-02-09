@@ -186,3 +186,20 @@ function handleButtonForName2(event)
         pushPlayer2();
     }
 }
+
+
+// Preloading audio files
+var audioFiles = [
+    "./sounds/click-1.mp3",
+    "./sounds/dice-roll.mp3"
+];
+
+function preloadAudio() {
+    for (var i = 0; i < audioFiles.length; i++) {
+        var audio = new Audio();
+        audio.src = audioFiles[i];
+        audio.preload = "auto";
+    }
+}
+// Call the preloadAudio function when the window loads
+window.onload = preloadAudio;
